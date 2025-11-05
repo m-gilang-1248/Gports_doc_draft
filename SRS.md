@@ -171,20 +171,22 @@ flowchart LR
 # 6. Arsitektur Sistem
 ```mermaid
 graph TD;
+
     subgraph Client;
+        direction TB;
         A1[Flutter App];
         A2[Local DB (Drift)];
     end;
 
     subgraph Backend;
+        direction TB;
         B1[API Gateway];
         B2[Business Logic Service];
         B3[Payment Service];
     end;
 
-    subgraph Database;
+    subgraph "Cloud Database";
         C1[(MySQL Cloud)];
-        C2[(Drift Local)];
     end;
 
     A1 --> A2;
@@ -192,7 +194,7 @@ graph TD;
     B1 --> B2;
     B1 --> B3;
     B2 --> C1;
-    C1 -->|Sync Data| C2;
+    C1 -->|Sync Data| A2;
 ```
 
 # Penjelasan Komponen Sistem
