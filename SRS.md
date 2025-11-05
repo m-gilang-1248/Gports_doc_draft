@@ -172,26 +172,30 @@ flowchart LR
 ```mermaid
 graph TD
 
+%% Client Side
 subgraph Client
     A1[Flutter App]
     A2[Local DB (Drift)]
+    A1 --> A2
 end
 
+%% Backend Side
 subgraph Backend
     B1[API Gateway]
     B2[Business Logic Service]
     B3[Payment Service]
+    B1 --> B2
+    B1 --> B3
 end
 
+%% Database Side
 subgraph Database
     C1[(MySQL Cloud)]
     C2[(Drift Local)]
 end
 
-A1 --> A2
+%% Cross-Component Connections
 A1 -->|REST API| B1
-B1 --> B2
-B1 --> B3
 B2 --> C1
 C1 -->|Sync Data| C2
 ```
