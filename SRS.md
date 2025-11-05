@@ -11,7 +11,14 @@
   - Ahmad Rois (221240001239)
   - M. Gilang M.W. Sabdokafi (221240001248)
 ---
+Dokumen ini bertujuan untuk menjelaskan kebutuhan perangkat lunak dari aplikasi **Gsports**, yaitu sistem pemesanan dan manajemen lapangan olahraga dengan integrasi papan skor digital serta sistem langganan premium.
 
+Aplikasi ini dirancang untuk memberikan kemudahan bagi pengguna dalam:
+- Melihat ketersediaan lapangan olahraga tanpa login.
+- Melakukan pemesanan lapangan dengan sistem pembayaran patungan.
+- Mengelola hasil pertandingan dengan papan skor digital.
+- Mengakses fitur premium berbasis subscription.
+---
 ## 1. Ruang Lingkup
 Aplikasi Gsports menyediakan:
 - Penelusuran dan tampilan ketersediaan lapangan (tanpa login).  
