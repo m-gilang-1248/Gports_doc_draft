@@ -55,15 +55,15 @@ Gunakan diagram sederhana agar mermaid parser tidak error. (Flowchart dasar)
 
 ```mermaid
 flowchart LR
-    User[User (Guest / Authenticated)] -->|browse| FlutterApp[Flutter App]
-    FlutterApp -->|local cache| LocalDB[(Drift - Local DB)]
-    FlutterApp -->|REST / SDK| API[API Gateway / Backend]
-    API --> Business[Business Logic Service]
-    Business --> CloudDB[(Cloud DB - MySQL/Postgres/Firestore)]
-    Business --> Payment[Payment Gateway (Midtrans/Xendit)]
-    Business --> FCM[Notification Service (FCM)]
+    User["User (Guest / Authenticated)"] -->|browse| FlutterApp["Flutter App"]
+    FlutterApp -->|local cache| LocalDB[("Drift - Local DB")]
+    FlutterApp -->|REST / SDK| API["API Gateway / Backend"]
+    API --> Business["Business Logic Service"]
+    Business --> CloudDB[("Cloud DB - MySQL/Postgres/Firestore")]
+    Business --> Payment["Payment Gateway (Midtrans/Xendit)"]
+    Business --> FCM["Notification Service (FCM)"]
 
-    Owner[SC Owner/Admin] -->|manage| API
+    Owner["SC Owner/Admin"] -->|manage| API
     SuperAdmin -->|manage| API
 ```
 ---
@@ -155,13 +155,13 @@ sequenceDiagram
 ## 12. Arsitektur Sistem
 ```mermaid
 flowchart TB
-    User --> FlutterApp[Flutter App]
-    FlutterApp --> LocalDB[(Drift - Local DB)]
-    FlutterApp -->|REST / SDK| APIGateway[API Gateway]
-    APIGateway --> BusinessSvc[Business Logic Service]
-    BusinessSvc --> CloudDB[(Cloud DB - MySQL/Postgres/Firestore)]
-    BusinessSvc --> PaymentGW[Payment Gateway (Midtrans/Xendit)]
-    BusinessSvc --> FCM[Push Notifications (FCM)]
+    User --> FlutterApp["Flutter App"]
+    FlutterApp --> LocalDB[("Drift - Local DB")]
+    FlutterApp -->|REST / SDK| APIGateway["API Gateway"]
+    APIGateway --> BusinessSvc["Business Logic Service"]
+    BusinessSvc --> CloudDB[("Cloud DB - MySQL/Postgres/Firestore")]
+    BusinessSvc --> PaymentGW["Payment Gateway (Midtrans/Xendit)"]
+    BusinessSvc --> FCM["Push Notifications (FCM)"]
     Owner --> APIGateway
     SuperAdmin --> APIGateway
     LocalDB -.-> CloudDB
@@ -180,14 +180,14 @@ flowchart TB
 ## 13. Use Case Diagram
 ```mermaid
 graph LR
-    U[User] -->|browse| View[Browse Fields]
-    U -->|auth| Auth[Login/Register]
-    U -->|book| Book[Create Booking]
-    U -->|join| Join[Join Patungan]
-    U -->|score| Score[Use Scoreboard]
-    U -->|upgrade| Sub[Subscribe Premium]
-    Owner[SC Owner] -->|manage| Manage[Manage Fields]
-    Admin -->|report| Report[View Reports]
+    U[User] -->|browse| View["Browse Fields"]
+    U -->|auth| Auth["Login/Register"]
+    U -->|book| Book["Create Booking"]
+    U -->|join| Join["Join Patungan"]
+    U -->|score| Score["Use Scoreboard"]
+    U -->|upgrade| Sub["Subscribe Premium"]
+    Owner["SC Owner"] -->|manage| Manage["Manage Fields"]
+    Admin -->|report| Report["View Reports"]
 ````
 ---
 ### 14. Teknologi yang Digunakan
