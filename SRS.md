@@ -205,6 +205,7 @@ B1 --> B2
 B1 --> B3
 B2 --> C1
 C1 -->|Sync Data| C2
+
 ```
 
 # Penjelasan Komponen Sistem
